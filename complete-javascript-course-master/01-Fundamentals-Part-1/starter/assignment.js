@@ -11,3 +11,8 @@ let language;
 console.log( isIsland, population, country, language )
 
 //Data type
+language = "Tagalog";
+const officialLang = language;
+language = "English";
+
+console.log( officialLang );
