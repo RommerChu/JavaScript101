@@ -79,7 +79,7 @@ const isFullAge = ageRommer >= 51; //true
 console.log( isFullAge ); // true
 
 console.log( now - 1972 > now - 1971 ); //false
-*/
+
 
 
 const now = 2023;
@@ -94,3 +94,60 @@ console.log( x, y );
 
 const averageAge = ( ageRommer + ageCorazon ) / 2;
 console.log( ageRommer, ageCorazon, averageAge );
+
+
+const firstName = "Rommer";
+const job = "UX Designer";
+const birthday = 1972;
+const year = 2023
+
+const rommer = 'I\'m ' + firstName + ', a ' + ( year - birthday ) + ' years old ' + job + '!';
+console.log( rommer );
+
+// Template literal -  using backticks can ease the string formation an allow variables to use
+const rommerNew = `I'm ${firstName}, a ${year - birthday} year old ${job}!`
+console.log( rommerNew )
+
+
+
+const age = 15
+//const isOldEnough = age >= 18;
+
+//IF ELSE statement
+if ( age >= 18 ) {
+    console.log( 'Rommer CAN START the project' )
+} else {
+    const yearleft = 18 - age;
+    console.log( `Rommer CANNOT START the project. Wait another ${yearleft} years.` )
+};
+
+const birthYear = 1972;
+let century;
+
+if ( birthYear <= 2000 ) {
+    century = 20;
+} else {
+    century = 21
+}
+console.log( century );
+
+*/
+
+//Type Conversions
+const inputYear = "1991";
+console.log( Number( inputYear ), inputYear )
+console.log( Number( inputYear ) + 18 );
+
+console.log( Number( "Rommer" ) );
+console.log( typeof NaN );
+console.log( String( 23 ), 23 );
+
+//Type Coersion
+console.log( 'I am ' + 51 + ' years old' );
+console.log( '51' - '50' - 1 );
+console.log( '51' / '50' - 1 );
+console.log( '51' * '50' + 1 );
+
+let n = "1" + 1;
+n = n - 1;
+console.log( n )

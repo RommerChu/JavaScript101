@@ -32,16 +32,29 @@ console.log( officialLang );
 // Mark > weight 95, height 1.88
 // John > weight 85, height 1.76
 
-const massMark = 78;
-const heightMark = 1.69;
+// const massMark = 78;
+// const heightMark = 1.69;
+// const massJohn = 92;
+// const heightJohn = 1.95;
 
-const massJohn = 92;
-const heightJohn = 1.95;
+const massMark = 95;
+const heightMark = 1.88;
+const massJohn = 85;
+const heightJohn = 1.76;
 
 let bmiMark = massMark / heightMark ** 2;
-let bmiJohn = massJohn / heightJohn ** 2;
+let bmiJohn = massJohn / ( heightJohn * heightJohn );
 
 console.log( bmiMark, bmiJohn )
 
 markHigherBMI = bmiMark > bmiJohn
 console.log( markHigherBMI )
+
+//Coding Challenge #2
+if ( bmiMark > bmiJohn ) {
+    console.log( `Marks's BMI(${bmiMark}) is higher that John's BMI(${bmiJohn})!` );
+    console.log( `Marks's BMI(${Math.floor( bmiMark )}) is higher that John's BMI(${Math.floor( bmiJohn )})!` )
+} else {
+    console.log( `John's BMI(${bmiJohn}) is higher that Marks's BMI(${bmiMark})!` );
+    console.log( `John's BMI(${Math.floor( bmiJohn )}) is higher that Marks's BMI(${Math.floor( bmiMark )})!` )
+}
