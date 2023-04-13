@@ -38,14 +38,14 @@ console.log( typeof null );
 let age = 30;
 age = 31;
 
-// constant declaration without changing is allowed
+//----------------constant declaration without changing is allowed
 const birthYear = 1991;
 
 lasName = "Chu"
 console.log( lasName );
 
 
-//Basic Operators
+//----------------Basic Operators
 //Math Operators
 const now = 2023;
 
@@ -62,7 +62,7 @@ const lastName = 'Chu';
 console.log( firstName + lastName );
 console.log( firstName + " " + lastName );
 
-//Assignment operators
+//----------------Assignment operators
 let x = 10 + 5; // 15
 x += 10; // x = x + 10
 x += 4; // x = x + 4 = 15 + 10 + 4 = 29
@@ -71,7 +71,7 @@ x--;
 
 console.log( x )
 
-//Comparison operators
+//----------------Comparison operators
 console.log( ageRommer < ageCorazon ); // true
 console.log( ageRommer >= 51 ); // true
 
@@ -104,7 +104,7 @@ const year = 2023
 const rommer = 'I\'m ' + firstName + ', a ' + ( year - birthday ) + ' years old ' + job + '!';
 console.log( rommer );
 
-// Template literal -  using backticks can ease the string formation an allow variables to use
+//----------------Template literal -  using backticks can ease the string formation an allow variables to use
 const rommerNew = `I'm ${firstName}, a ${year - birthday} year old ${job}!`
 console.log( rommerNew )
 
@@ -113,7 +113,7 @@ console.log( rommerNew )
 const age = 15
 //const isOldEnough = age >= 18;
 
-//IF ELSE statement
+//---------------- IF ELSE statement
 if ( age >= 18 ) {
     console.log( 'Rommer CAN START the project' )
 } else {
@@ -131,9 +131,9 @@ if ( birthYear <= 2000 ) {
 }
 console.log( century );
 
-*/
 
-//Type Conversions
+
+//----------------- Type Conversions
 const inputYear = "1991";
 console.log( Number( inputYear ), inputYear )
 console.log( Number( inputYear ) + 18 );
@@ -142,7 +142,7 @@ console.log( Number( "Rommer" ) );
 console.log( typeof NaN );
 console.log( String( 23 ), 23 );
 
-//Type Coersion
+//----------------Type Coersion
 console.log( 'I am ' + 51 + ' years old' );
 console.log( '51' - '50' - 1 );
 console.log( '51' / '50' - 1 );
@@ -151,3 +151,41 @@ console.log( '51' * '50' + 1 );
 let n = "1" + 1;
 n = n - 1;
 console.log( n )
+
+//----------------5 Falsy values: 0, "", undefined, NaN, null
+console.log( "----------------" );
+console.log( Boolean( 0 ) );
+console.log( Boolean( undefined ) );
+console.log( Boolean( "Rommer" ) );
+console.log( Boolean( {} ) );
+console.log( Boolean( '' ) );
+
+//----------------Example 1
+const money = 0; // O is falsy. therefore ELSE will trigger
+if ( money ) {
+    console.log( "Don't spend it all ;)" )
+} else {
+    console.log( "You should get a job!" )
+}
+
+//----------------Example 2
+let height; // Undefined, no value was set - 0 is also undefined
+if ( height ) {
+    console.log( "YAY! Height is defined" )
+} else {
+    console.log( "Height is UNDEFINED!" )
+}
+
+*/
+
+const age = '18';
+if ( age === 18 ) console.log( "You became an adult (strict)" ); // straight
+if ( age == 18 ) console.log( "You became an adult (loose)" ); // coersion - Not advisable use, unless you know how to use it
+
+
+
+
+
+
+
+

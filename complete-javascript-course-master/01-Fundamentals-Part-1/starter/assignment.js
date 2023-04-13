@@ -1,3 +1,5 @@
+/*
+
 //Assignment #1
 console.log( "----------Assignment----------" )
 let country = 'Philippines';
@@ -58,3 +60,6 @@ if ( bmiMark > bmiJohn ) {
     console.log( `John's BMI(${bmiJohn}) is higher that Marks's BMI(${bmiMark})!` );
     console.log( `John's BMI(${Math.floor( bmiJohn )}) is higher that Marks's BMI(${Math.floor( bmiMark )})!` )
 }
+
+*/
+
