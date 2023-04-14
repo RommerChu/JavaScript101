@@ -1,3 +1,4 @@
+console.log( "----------Assignment----------" )
 /*
 
 //Assignment #1
@@ -19,7 +20,7 @@ language = "English";
 
 console.log( officialLang );
 
-//Coding Challenge #1
+//-----------------Coding Challenge #1
 //Formula 1
 // BMI = mass / height ** 2
 
@@ -60,6 +61,61 @@ if ( bmiMark > bmiJohn ) {
     console.log( `John's BMI(${bmiJohn}) is higher that Marks's BMI(${bmiMark})!` );
     console.log( `John's BMI(${Math.floor( bmiJohn )}) is higher that Marks's BMI(${Math.floor( bmiMark )})!` )
 }
-
 */
 
+/*
+//-----------------Coding Challenge #2
+
+
+// let dolphins = { 'x': 96, 'y': 108, 'z': 89 }
+// let koalas = { 'x': 88, 'y': 91, 'z': 110 }
+// let competition = 3;
+
+//let dolphins = ( 96 + 108 + 89 ) / 3;
+//let koalas = ( 88 + 91 + 110 ) / 3;
+
+//Data 1 -  Calculate the average score for each team, using the test data below - Dolphins Win
+// const minSCore = 100;
+// const dolphins = ( 96 + 108 + 89 ) / 3;
+// const koalas = ( 88 + 91 + 110 ) / 3;
+// console.log( "Dolphins Score Average: " + dolphins );
+// console.log( "Koalas Score Average: " + koalas );
+// console.log( dolphins, koalas );
+
+//Data - Bonus 1 - Koala Wins
+// const minSCore = 100;
+// const dolphins = ( 97 + 112 + 101 ) / 3;
+// const koalas = ( 109 + 95 + 123 ) / 3;
+// console.log( "Dolphins Score Average: " + dolphins );
+// console.log( "Koalas Score Average: " + koalas );
+// console.log( dolphins, koalas );
+// if ( dolphins > koalas && dolphins >= minSCore ) {
+//     console.log( "Dolphins win the game " + dolphins );
+// } else if ( koalas > dolphins && koalas >= minSCore ) {
+//     console.log( "Koalas win the game " + koalas )
+// } else {
+//     console.log( "They are tie" )
+// }
+
+//Data - Bonus 2 - They are tie
+const minSCore = 100;
+const dolphins = ( 97 + 112 + 101 ) / 3;
+const koalas = ( 109 + 95 + 106 ) / 3;
+console.log( "Dolphins Score Average: " + dolphins );
+console.log( "Koalas Score Average: " + koalas );
+console.log( dolphins, koalas );
+if ( dolphins > koalas && dolphins >= minSCore ) {
+    console.log( "Dolphins win the game " + dolphins );
+} else if ( koalas > dolphins && koalas >= minSCore ) {
+    console.log( "Koalas win the game " + koalas )
+} else if (
+    dolphins === koalas &&
+    dolphins >= minSCore &&
+    koalas >= minSCore
+) {
+    console.log( "They are tie" )
+} else {
+    console.log( "No winner" )
+}
+
+*/

@@ -176,16 +176,112 @@ if ( height ) {
     console.log( "Height is UNDEFINED!" )
 }
 
-*/
+
 
 const age = '18';
 if ( age === 18 ) console.log( "You became an adult (strict)" ); // straight
 if ( age == 18 ) console.log( "You became an adult (loose)" ); // coersion - Not advisable use, unless you know how to use it
 
+//----------------Adding PROMPT to enter value by users
+const favourite = Number( prompt( "What is your favourite number?" ) );
+console.log( favourite );
+console.log( typeof favourite );
+
+//----------------Equality Operator
+if ( favourite === 23 ) { // string converted to number '23' == 23
+    console.log( "Cool! 23 is amazing number" )
+} else if ( favourite === 7 ) {
+    console.log( "Seven is also a cool number" )
+} else if ( favourite === 9 ) {
+    console.log( "Seven is also a cool number" )
+} else {
+    console.log( "That is not cool!" )
+}
+
+if ( favourite !== 23 ) {
+    console.log( "Why not 23?" )
+}
+
+*/
 
 
+/*
 
+//----------------Boolean Operators
+const hasDriversLic = true; //A
+const hasGoodVision = true; //B
 
+console.log( hasDriversLic && hasGoodVision );
+console.log( hasDriversLic || hasGoodVision );
+console.log( !hasDriversLic );
 
+//const shouldDrive = hasDriversLic && hasGoodVision;
+
+// if ( shouldDrive ) {
+//     console.log( "Rommer can drive" )
+// } else {
+//     console.log( "Someone else has to drive" )
+// }
+
+const isTired = false; //C
+console.log( hasDriversLic || hasGoodVision || isTired )
+console.log( hasDriversLic && hasGoodVision && isTired )
+
+if ( hasDriversLic && hasGoodVision && !isTired ) {
+    console.log( "Rommer can drive" )
+} else {
+    console.log( "Someone else has to drive" )
+}
+
+*/
+
+//----------------Switch Statement
+
+const day = 'wednesday';
+
+switch ( day ) {
+    case 'monday':
+        console.log( "Its Monday" );
+        break;
+    case 'tuesday':
+        console.log( "Its tuesday" );
+        break;
+    case 'wednesday':
+        console.log( "Its Wednesday" );
+        break;
+    case 'thursday':
+        console.log( "Its Thurdsay" );
+        break;
+    case 'friday':
+        console.log( "Its Friday" );
+        break;
+    case 'saturday':
+    case 'sunday':
+        console.log( "Its Weekend!" )
+        break;
+    default:
+        console.log( "Select a day" );
+}
+
+if ( day === 'monday' ) {
+    console.log( "Its Monday" );
+}
+if ( day === 'tuesday' ) {
+    console.log( "Its Tuesday" );
+}
+if ( day === 'wednesday' ) {
+    console.log( "Its Wednesday" );
+}
+if ( day === 'thursday' ) {
+    console.log( "Its Thursday" );
+}
+if ( day === 'friday' ) {
+    console.log( "Its Friday" );
+}
+if ( day === 'saturday' || day === 'sunday' ) {
+    console.log( "Its Weekend!" );
+} else {
+    console.log( "Select a day" );
+}
 
 
