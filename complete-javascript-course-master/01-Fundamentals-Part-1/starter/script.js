@@ -234,10 +234,10 @@ if ( hasDriversLic && hasGoodVision && !isTired ) {
 }
 
 */
-
+/*
 //----------------Switch Statement
 
-const day = 'wednesday';
+const day = 'friday';
 
 switch ( day ) {
     case 'monday':
@@ -283,5 +283,20 @@ if ( day === 'saturday' || day === 'sunday' ) {
 } else {
     console.log( "Select a day" );
 }
+*/
 
+//----------------Ternary Operator
 
+const age = 17;
+//age >= 18 ? console.log( "Legal age" ) : console.log( "Minor age" );
+
+const drink = age >= 18 ? "Legal age" : "Minor age"
+console.log( drink );
+
+let drink2;
+if ( age >= 18 ) {
+    drink2 = "drink wine";
+} else {
+    drink2 = "drink water :smile"
+}
+console.log( drink2 );
