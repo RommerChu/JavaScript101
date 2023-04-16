@@ -66,7 +66,6 @@ if ( bmiMark > bmiJohn ) {
 /*
 //-----------------Coding Challenge #2
 
-
 // let dolphins = { 'x': 96, 'y': 108, 'z': 89 }
 // let koalas = { 'x': 88, 'y': 91, 'z': 110 }
 // let competition = 3;
@@ -119,3 +118,13 @@ if ( dolphins > koalas && dolphins >= minSCore ) {
 }
 
 */
+
+//-----------------Coding Challenge #3
+const bill = 275;
+
+// const minTip = bill * 0.15;
+// const maxTip = bill * 0.20;
+// console.log( `Your bill was: $${bill}. Tip: $${bill >= 50 && bill <= 300 ? minTip : maxTip} and the Total value $${bill >= 50 && bill <= 300 ? minTip + bill : maxTip + bill}` )
+
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20;
+console.log( `Your bill was: $${bill}. Tip: $${tip} and the Total value $${tip + bill}` )

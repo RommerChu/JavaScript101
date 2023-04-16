@@ -300,3 +300,5 @@ if ( age >= 18 ) {
     drink2 = "drink water :smile"
 }
 console.log( drink2 );
+
+console.log( `I like to drink ${age >= 18 ? "Beer 🍺" : "Water 💧"}` );
