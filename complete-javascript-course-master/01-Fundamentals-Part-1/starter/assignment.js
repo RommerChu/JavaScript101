@@ -120,7 +120,7 @@ if ( dolphins > koalas && dolphins >= minSCore ) {
 */
 
 //-----------------Coding Challenge #3
-const bill = 275;
+const bill = 430;
 
 // const minTip = bill * 0.15;
 // const maxTip = bill * 0.20;
