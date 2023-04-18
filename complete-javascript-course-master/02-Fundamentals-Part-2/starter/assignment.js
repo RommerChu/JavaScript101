@@ -3,7 +3,7 @@
 // const calcAverage = ( score1, score2, score3 ) => {
 //     return ( score1 + score2 + score3 ) / 3
 // }
-
+/*
 //Set calculation formula
 const calcAverage = ( score1, score2, score3 ) => {
     return ( score1 + score2 + score3 ) / 3;
@@ -25,10 +25,11 @@ const checkWinner = function ( avgDolphins, avgKoalas ) {
 }
 checkWinner( teamDolphins, teamKoalas );
 
+*/
 
 console.log( "-----------------------------" )
 
-
+/*
 //Solution - CTRL + D to edit a variable all at one instance
 
 const calAverage = ( a, b, c ) => ( a + b + c ) / 3;
@@ -54,3 +55,36 @@ const checkWinners = function ( avgDolphine, avgKoala ) {
     }
 }
 checkWinners( scoreDolphins, scoreKoalas );
+*/
+
+
+
+//My new version of calculation
+const calAvg = ( x, y, z ) => ( x + y + z ) / 3;
+//console.log( calAvg( 2, 4, 6 ) );
+
+//Data 1
+//Change const to let to reassign the variable from Data 1
+let teamD1 = calAvg( 44, 23, 71 );
+let teamK1 = calAvg( 65, 54, 49 );
+
+//Reassignment of value for Data 2
+teamD1 = calAvg( 85, 54, 41 );
+teamK1 = calAvg( 23, 34, 27 );
+
+const chkWin = ( avgD, avgK ) => {
+
+    //Data 1
+    if ( avgD >= 2 * avgK ) {
+        console.log( `Dolphins win! (${avgD} vs ${avgK})` );
+    }
+    else if ( avgK >= 2 * avgD ) {
+        console.log( `Koala win! (${avgK} vs ${avgD})` );
+    } else {
+        console.log( "No Winner" );
+    }
+
+}
+
+console.log( teamD1, teamK1 );
+chkWin( teamD1, teamK1 )
