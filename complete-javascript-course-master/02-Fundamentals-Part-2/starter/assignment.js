@@ -19,10 +19,11 @@ const checkWinner = function ( avgDolphins, avgKoalas ) {
     } else if ( avgKoalas >= 2 * avgDolphins ) {
         console.log( `Koalas wins! (${avgKoalas} vs ${avgDolphins})` );
     } else {
-        return "No winner"
+        console.log( "No Winner" );
+        //return "No winner"
     }
 }
-console.log( checkWinner( teamDolphins, teamKoalas ) );
+checkWinner( teamDolphins, teamKoalas );
 
 
 console.log( "-----------------------------" )
