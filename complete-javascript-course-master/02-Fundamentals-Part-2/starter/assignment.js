@@ -68,6 +68,7 @@ const calAvg = ( x, y, z ) => ( x + y + z ) / 3;
 let teamD1 = calAvg( 44, 23, 71 );
 let teamK1 = calAvg( 65, 54, 49 );
 
+//Data 2
 //Reassignment of value for Data 2
 teamD1 = calAvg( 85, 54, 41 );
 teamK1 = calAvg( 23, 34, 27 );
