@@ -4,13 +4,15 @@
 //     return ( score1 + score2 + score3 ) / 3
 // }
 
+//Set calculation formula
 const calcAverage = ( score1, score2, score3 ) => {
     return ( score1 + score2 + score3 ) / 3;
 }
-
+//Two teams defined
 const teamDolphins = calcAverage( 44, 23, 71 );
 const teamKoalas = calcAverage( 65, 54, 49 );
 
+//Function to implement calculation
 const checkWinner = function ( avgDolphins, avgKoalas ) {
     if ( avgDolphins >= 2 * avgKoalas ) {
         console.log( `Dolphin wins! (${avgDolphins} vs${avgKoalas})` );
@@ -20,9 +22,7 @@ const checkWinner = function ( avgDolphins, avgKoalas ) {
         return "No winner"
     }
 }
-
 console.log( checkWinner( teamDolphins, teamKoalas ) );
-
 
 
 console.log( "-----------------------------" )
