@@ -86,6 +86,51 @@ const chkWin = ( avgD, avgK ) => {
     }
 
 }
-
 console.log( teamD1, teamK1 );
-chkWin( teamD1, teamK1 )
+
+
+console.log( "---------------Coding Challenge #2---------------" )
+
+//Coding Challenge #2 - Array
+
+//const bill = 100;
+//const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20;
+
+const bills = [ 125, 555, 44 ];
+
+const total = new Array( 1, 2, 3 );
+console.log( total );
+
+
+const calcTip = ( bill, tip ) => {
+
+    if ( bill <= 300 && bill >= 50 ) {
+        tip = bill * 0.15;
+        console.log( `Bill is $${bill} tip is 15% ($${tip}) = $${bill + tip}` );
+    } else {
+        tip = bill * 0.20;
+        console.log( `Bill is $${bill} tip is 20% ($${tip}) = $${bill + tip}` );
+    }
+
+}
+const bill1 = calcTip( bills[ 0 ] );
+const bill2 = calcTip( bills[ 1 ] );
+const bill3 = calcTip( bills[ 2 ] );
+
+
+
+
+
+
+
+
+
+//-----------------Coding Challenge #3
+//const bill = 430;
+
+// const minTip = bill * 0.15;
+// const maxTip = bill * 0.20;
+// console.log( `Your bill was: $${bill}. Tip: $${bill >= 50 && bill <= 300 ? minTip : maxTip} and the Total value $${bill >= 50 && bill <= 300 ? minTip + bill : maxTip + bill}` )
+
+//const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20;
+// console.log( `Your bill was: $${bill}. Tip: $${tip} and the Total value $${tip + bill}` )
