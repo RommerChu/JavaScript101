@@ -96,14 +96,10 @@ console.log( "---------------Coding Challenge #2---------------" )
 //const bill = 100;
 //const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20;
 
-const bills = [ 125, 555, 44 ];
-
-const total = new Array( 1, 2, 3 );
-console.log( total );
-
+//----------MY SOLUTION
+const billst = [ 125, 555, 44 ];
 
 const calcTip = ( bill, tip ) => {
-
     if ( bill <= 300 && bill >= 50 ) {
         tip = bill * 0.15;
         console.log( `Bill is $${bill} tip is 15% ($${tip}) = $${bill + tip}` );
@@ -111,13 +107,27 @@ const calcTip = ( bill, tip ) => {
         tip = bill * 0.20;
         console.log( `Bill is $${bill} tip is 20% ($${tip}) = $${bill + tip}` );
     }
-
 }
-const bill1 = calcTip( bills[ 0 ] );
-const bill2 = calcTip( bills[ 1 ] );
-const bill3 = calcTip( bills[ 2 ] );
+const bill1 = calcTip( billst[ 0 ] );
+const bill2 = calcTip( billst[ 1 ] );
+const bill3 = calcTip( billst[ 2 ] );
+//OR
+const billed = [ calcTip( billst[ 0 ] ), calcTip( billst[ 1 ] ), calcTip( billst[ 2 ] ) ];
 
 
+
+
+//----------SOLUTION FROM CLASS
+const calcTips = function ( bill ) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+}
+//console.log( calcTips );
+
+const bills = [ 125, 555, 44 ];
+const tips = [ calcTips( bills[ 0 ] ), calcTips( bills[ 1 ] ), calcTips( bills[ 2 ] ) ];
+console.log( bills, tips );
+const total = [ bills[ 0 ] + tips[ 0 ], bills[ 1 ] + tips[ 1 ], bills[ 2 ] + tips[ 2 ] ]
+console.log( total );
 
 
 
