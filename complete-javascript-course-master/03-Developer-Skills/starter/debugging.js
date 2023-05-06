@@ -12,8 +12,8 @@ const measureKelvin = function () {
   console.log(measurement);
   console.table(measurement); // to show in table
   //   console.log(measurement.value);
-  //   console.warn(measurement.value); // To show warning in YELLOW!
-  //   console.error(measurement.value); // To show error in RED
+  console.warn(measurement.value); // To show warning in YELLOW!
+  console.error(measurement.value); // To show error in RED
 
   const kelvin = measurement.value + 273; // value is in string if not converted
   return kelvin;
@@ -25,8 +25,8 @@ const temperatures = [-3, -2, -6, -1, -9, 'error', 9, 13, 17, 15, 14, 9, 5];
 const calcTempAmplitudeBug = (t1, t2) => {
   const tempsBug = t1.concat(t2);
   console.log(tempsBug);
-  let max = 0; // <-- THIS IS A BUG TO FIX
-  let min = 0; //<-- THIS IS A BUG TO FIX
+  let max = 0; // <-- THIS IS A BUG TO FIX --- tempsBug[i]
+  let min = 0; //<-- THIS IS A BUG TO FIX --- tempsBug[i]
 
   for (let i = 0; i < tempsBug.length; i++) {
     const currentTemp = tempsBug[i];
@@ -49,5 +49,5 @@ const calcTempAmplitudeBug = (t1, t2) => {
 // calcTempAmplitudeBug([5, 12, 4, 23, 1, -5, -1, 12, 26]);
 // const amplitude = calcTempAmplitudeBug(temperatures);
 
-const ampBug = calcTempAmplitudeBug([5, 4, 3, 2, 1], [9, 8, 7, 6]);
+const ampBug = calcTempAmplitudeBug([10, 9, 8, 7, 6], [5, 4, 3, 2, 1, 0]);
 console.log(ampBug);
