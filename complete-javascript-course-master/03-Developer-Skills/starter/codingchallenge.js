@@ -21,9 +21,9 @@ const printForecast1 = function (arr) {
   let days = 0; // Days counter
   for (let i = 0; i < arr.length; i++) {
     days++; // days counts
-    console.log(`... ${arr[i]}ºC in ${days} days...`);
+    console.log(`... ${arr[i]}ºC in ${days} days...`); // <= Wrong, not converted to string...
   }
-  console.log(arr);
+  console.log(arr); //<= Should not call the arr, its object NOT STRING
 };
 printForecast1(data1);
 printForecast1(data2);
