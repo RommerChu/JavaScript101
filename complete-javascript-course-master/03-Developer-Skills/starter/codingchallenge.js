@@ -15,7 +15,7 @@
 const data1 = [17, 21, 23];
 const data2 = [12, 5, -5, 0, 4];
 
-//----------MY SOLUTION...
+//----------MY SOLUTION....
 //Function Print Forecast
 const printForecast1 = function (arr) {
   let days = 0; // Days counter
