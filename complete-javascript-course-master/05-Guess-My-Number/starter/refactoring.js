@@ -20,7 +20,15 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 //console.log(number);
 let score = 20;
 let highSCore = 0;
-//document.querySelector('.number').textContent = secretNumber;
+let tooHigh = '';
+
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
+
+const displayMessage2 = function (message) {
+  document.querySelector('.message').textContent = message;
+};
 
 //Click button function
 document.querySelector('.check').addEventListener('click', function () {
@@ -38,7 +46,8 @@ document.querySelector('.check').addEventListener('click', function () {
     //When player wins background color == green
   } else if (guess === secretNumber) {
     document.querySelector('.number').textContent = secretNumber;
-    document.querySelector('.message').textContent = '✔️ Correct Number';
+    displayMessage2('✔️ Correct Number');
+    //document.querySelector('.message').textContent = '✔️ Correct Number';
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '20rem';
     //document.querySelector( '.highscore' ).textContent = score;
@@ -47,32 +56,47 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.highscore').textContent = highSCore;
     }
 
+    //SHORTER VERSION OF CODE
     //When guess is too high
-  } else if (guess > secretNumber) {
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = '🔆 Too high';
-      score--;
+      document.querySelector('.message').textContent =
+        guess > secretNumber ? '🔆 Too high' : '🤡 Too low';
+      score--; //Ternary code simplified
       document.querySelector('.score').textContent = score;
     } else {
       document.querySelector('body').style.backgroundColor = '#880808';
-      document.querySelector('.message').textContent = '❗ You Lost The Game';
+      displayMessage('❗ You Lost The Game');
+      //document.querySelector('.message').textContent = '❗ You Lost The Game';
       document.querySelector('.score').textContent = 0;
-      //document.querySelector('.highscore').textContent = score;
-    }
-
-    //When guess is too low
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = '🤡 Too low';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('body').style.backgroundColor = '#880808';
-      document.querySelector('.message').textContent = '❗ You Lost The Game';
-      document.querySelector('.score').textContent = 0;
-      //document.querySelector('.highscore').textContent = score;
+      //document.querySelector('.number').textContent = secretNumber;
     }
   }
+  //   else if ( guess > secretNumber ) {
+  //     if (score > 1) {
+  //       document.querySelector('.message').textContent = '🔆 Too high';
+  //       score--;
+  //       document.querySelector('.score').textContent = score;
+  //     } else {
+  //       document.querySelector('body').style.backgroundColor = '#880808';
+  //       document.querySelector('.message').textContent = '❗ You Lost The Game';
+  //       document.querySelector('.score').textContent = 0;
+  //       //document.querySelector('.highscore').textContent = score;
+  //     }
+
+  //     //When guess is too low
+  //   } else if (guess < secretNumber) {
+  //     if (score > 1) {
+  //       document.querySelector('.message').textContent = '🤡 Too low';
+  //       score--;
+  //       document.querySelector('.score').textContent = score;
+  //     } else {
+  //       document.querySelector('body').style.backgroundColor = '#880808';
+  //       document.querySelector('.message').textContent = '❗ You Lost The Game';
+  //       document.querySelector('.score').textContent = 0;
+  //       //document.querySelector('.highscore').textContent = score;
+  //     }
+  //   }
 });
 
 document.querySelector('.again').addEventListener('click', function () {
