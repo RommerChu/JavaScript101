@@ -27,3 +27,15 @@ const restaurant = {
     },
   },
 };
+
+//Traditional Destructuring
+
+const arr = [2, 3, 4];
+const a = arr[0];
+const b = arr[1];
+const c = arr[2];
+
+console.log(a, b, c);
+
+const [x, y, z] = arr; // Destructuring method by defining []
+console.log('test', x, y, z);
