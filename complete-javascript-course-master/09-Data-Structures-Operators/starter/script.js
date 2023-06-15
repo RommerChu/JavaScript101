@@ -26,16 +26,100 @@ const restaurant = {
       close: 24,
     },
   },
+  //Adding function to the object
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
+  //Adding function to the object
+  orderDelivery: function ({ starterIndex, mainIndex, address, time }) {
+    console.log(
+      `Order of ${this.starterMenu[starterIndex]} 
+      and ${this.mainMenu[mainIndex]} 
+      will be delivered to ${address} at ${time}`
+    );
+  },
 };
 
-//Traditional Destructuring
+restaurant.orderDelivery({
+  time: '5:00pm',
+  address: '555 street ave., toronto',
+  mainIndex: 2,
+  starterIndex: 2,
+});
 
+console.log(restaurant.orderDelivery);
+
+//----------------
+const { name, openingHours, starterMenu } = restaurant;
+console.log('test: ', name, openingHours, starterMenu);
+
+//Setting a new DEFAULT VALUE adding []
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log('Menus:', menu, starters);
+
+//----------------Traditional Destructuring
 const arr = [2, 3, 4];
-const a = arr[0];
+const a = arr[0]; // Traditional destructuring NOT RECOMMENDED!
 const b = arr[1];
 const c = arr[2];
-
-console.log(a, b, c);
+//console.log(a, b, c);
 
 const [x, y, z] = arr; // Destructuring method by defining []
-console.log('test', x, y, z);
+//console.log('test', x, y, z);
+
+const [first, second] = restaurant.categories;
+//console.log(first, second); // Italian, Pizzeria
+
+//----------------Switching variables
+let [main, secondary] = restaurant.categories;
+//console.log(main, secondary); // Italian, Pizzeria
+
+// const temp = main;
+// main = secondary;
+// secondary = temp;
+// console.log(main, secondary);
+
+//The right way to invert destructuring
+[main, secondary] = [secondary, main];
+//console.log(main, secondary);
+
+//Arrays pulled from Restaurant
+console.log(restaurant.order(2, 2));
+
+//Destructure
+//Received 2 return values from the ORDER function
+const [starter, mainCourse] = restaurant.order(2, 2);
+console.log(starter, mainCourse);
+
+// Nested Destructuring
+const nested = [2, 4, [6, 8]];
+console.log(nested);
+const [k, , [m, n]] = nested;
+console.log('skipping: ', k, m, n); //2,6,8 --- skipping 4
+
+//Setting default value (if not existing)
+const [p = 1, q = 1, r = 1] = [8, 9];
+console.log('Setting Default:', p, q, r);
+
+//Mutating variables
+let g = 222;
+let h = 333;
+const obj = { g: 200, h: 300, c: 400 };
+//Curly braces will generate error
+// Wrap it with brackets important!
+({ g, h } = obj);
+console.log('Mutating variable object: ', g, h);
+
+//-----------------Extracttion of Satruday opening of restaurant from object
+const {
+  fri: { open, close },
+} = openingHours;
+console.log(open, close);
+
+//-----------------Extracttion of Satruday opening of restaurant from object
+//Reassigning object to new variable
+const {
+  sat: { open: o, close: d },
+} = openingHours;
+console.log(o, d);
