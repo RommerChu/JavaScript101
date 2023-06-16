@@ -39,7 +39,21 @@ const restaurant = {
       will be delivered to ${address} at ${time}`
     );
   },
+
+  //Adding prompt function
+  orderIngredients: function (ing1, ing2, ing3) {
+    return ing1, ing2, ing3;
+  },
 };
+
+//OrderIngredients
+const ingredients = [
+  // prompt("Let's make pizza ingredient1"),
+  // prompt('ingredient2'),
+  // prompt('ingredient3'),
+];
+console.log('Ingredients are: ', ingredients);
+restaurant.orderIngredients(...ingredients);
 
 restaurant.orderDelivery({
   time: '5:00pm',
@@ -123,3 +137,43 @@ const {
   sat: { open: o, close: d },
 } = openingHours;
 console.log(o, d);
+
+//Spread operator
+const arrOrg = [7, 8, 9];
+const badArr = [1, 2, arrOrg[0], arrOrg[1], arrOrg[2]]; //Bad
+console.log(badArr);
+
+//Correct and simplified spread of Array
+const goodArr = [7, 8, 9];
+const newGoodArr = [1, 2, ...goodArr];
+console.log(newGoodArr); // Showing objects in array format
+console.log(...newGoodArr); // Extracted from array
+
+const newMenu = [...restaurant.mainMenu, 'Granola'];
+console.log(...newMenu);
+
+const mainNewMenuCopy = [...restaurant.mainMenu];
+console.log(mainNewMenuCopy);
+console.log(...mainNewMenuCopy);
+
+//Join 2 arrays
+const menu123 = [...restaurant.starterMenu, ...restaurant.mainMenu];
+const menu456 = ['salad', 'pizza', ...menu123];
+console.log(menu456);
+console.log(...menu456);
+
+//Iterations: arrays, string, maps, sets. NOT WITH OBJECTS
+const myName = 'Rommer';
+const iterate = [...myName, ' ', 'Chu'];
+console.log(iterate);
+console.log(...iterate);
+console.log(`${iterate}`);
+
+//Object
+const newRes = { foundedIn: 1998, ...restaurant, founder: 'Rommer' };
+console.log(newRes);
+
+const newResCopy = { ...restaurant };
+newResCopy.name = 'Rommers Restaurant';
+console.log(newResCopy.name);
+console.log(restaurant.name);
