@@ -175,5 +175,36 @@ console.log(newRes);
 
 const newResCopy = { ...restaurant };
 newResCopy.name = 'Rommers Restaurant';
-console.log(newResCopy.name);
+newResCopy.location = '2 Goldgate Cres, Orangeville, ON L9W4B5';
+console.log(newResCopy.name, newResCopy.location);
 console.log(restaurant.name);
+
+//REST, because on LEFT side of =
+const [l, f, j, ...other] = [1, 2, 3, 4, 5];
+console.log(l, f, j, other);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+
+//Object
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+//Functions
+const add = function (...number) {
+  //console.log(number);
+  let sum = 0;
+  for (let i = 0; i < number.length; i++) {
+    sum += number[i];
+  }
+  console.log(sum);
+};
+add(2, 5); //7
+add(4, 5, 6, 7); //22
+add(1, 8, 9, 4, 3, 6, 5); //36
+
+const xyz = [2, 3, 4, 5, 6, 7];
+add(...xyz);
