@@ -44,7 +44,16 @@ const restaurant = {
   orderIngredients: function (ing1, ing2, ing3) {
     return ing1, ing2, ing3;
   },
+
+  orderPizza: function (mainIngredients, ...otherIngredients) {
+    console.log('mainIngredients:', mainIngredients);
+    console.log('otherIngredients:', otherIngredients);
+  },
 };
+
+//Order Pizza function
+restaurant.orderPizza('Mozerella', 'Olives', 'Mushrooms', 'Spinach');
+restaurant.orderPizza('Pepperoni');
 
 //OrderIngredients
 const ingredients = [
@@ -206,5 +215,5 @@ add(2, 5); //7
 add(4, 5, 6, 7); //22
 add(1, 8, 9, 4, 3, 6, 5); //36
 
-const xyz = [2, 3, 4, 5, 6, 7];
+const xyz = [2, 3, 4, 5, 6, 7]; //27
 add(...xyz);
