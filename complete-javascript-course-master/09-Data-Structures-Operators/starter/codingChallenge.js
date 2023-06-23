@@ -79,12 +79,12 @@ console.log('Players1 Final: ', players1Final);
 
 //Task 5
 //Based on the game.odds object, create one variable for each odd (called 'team1', 'draw' and 'team2')
-const [x1, x2, x3] = [game.odds.team1, game.odds.x, game.odds.team2];
-console.log('test', x1, x2, x3);
+const [team1, draw, team2] = [game.odds];
+//console.log('test', x1, x2, x3);
 
-const team1 = game.odds.team1;
-const draw = game.odds.x;
-const team2 = game.odds.team2;
+// const team1 = game.odds.team1;
+// const draw = game.odds.x;
+// const team2 = game.odds.team2;
 console.log(team1, draw, team2);
 
 //Task 6
