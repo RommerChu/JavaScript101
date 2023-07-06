@@ -4,7 +4,7 @@ console.log('--------------------NULLISH COALESCING--------------------');
 
 restaurant.numGuest = 0;
 const guest3 = restaurant.numGuest ?? 10; //If numGuest is not defined then 10 is the nullish
-console.log('Nullish coalescing: ', guest3);
+console.log('Nullish coalescing: ', guest3); // return 0
 
 //OR assignment operator
 const rest1 = {
