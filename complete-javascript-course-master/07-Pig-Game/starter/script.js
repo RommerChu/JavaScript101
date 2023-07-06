@@ -65,7 +65,7 @@ const reset = function () {
   player0.classList.add('player--active');
   player1.classList.remove('player--active');
 
-  playing = true;
+  //playing = true;
 };
 reset(); // Call the function
 
