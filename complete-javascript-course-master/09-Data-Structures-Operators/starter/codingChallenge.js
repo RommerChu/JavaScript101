@@ -107,6 +107,8 @@ const printGoals = function (...players) {
   for (let i = 0; i < players.length; i++) console.log(players[i]);
 };
 
+console.log('-------------------Printing Goals--------------------');
+
 printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
 printGoals('Davies', 'Muller');
 printGoals(...game.scored);
@@ -118,3 +120,18 @@ printGoals(...game.scored);
 
 team1 < team2 && console.log('Team 1 is likely to win '); //True + True = print console
 team1 > team2 && console.log('Team 2 is likely to win ');
+
+console.log('-------------------CODING CHALLENGE - PART 2--------------------');
+
+// 1. Loop over the game.scored array and print each player name to the console,
+// along with the goal number (Example: "Goal 1: Lewandowski")
+// for (let i = 0; i < game.scored.length; i++) {
+//   console.log(`Goal ${[i] + 1}: ${game.scored[i]}`);
+// }
+
+for (const goal of game.scored.entries()) {
+  console.log(`Goal ${goal[0] + 1} ${goal[1]}`);
+}
+
+// 2. Use a loop to calculate the average odd and log it to the console (We already
+// studied how to calculate averages, you can go check if you don't remember)
