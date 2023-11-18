@@ -51,3 +51,17 @@ console.log(
 console.log(new Set(staffUnique).size);
 
 console.log(new Set('RommerOrquizaChu').size);
+('use strict');
+
+console.log('-------------------Set-------------------');
+
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Rissoto',
+  'Spaghetti',
+  'Spaghetti',
+]);
+
+console.log(orderSet);

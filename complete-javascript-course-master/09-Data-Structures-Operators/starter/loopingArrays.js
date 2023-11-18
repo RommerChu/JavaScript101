@@ -54,7 +54,7 @@ console.log(
   '--------------------LOOPING ARRAYS: Object Entries--------------------'
 );
 
-//Property entries (variable and value)
+//Property entries (variable and value)...
 const entries = Object.entries(openingHours);
 console.log(entries); // Returns the object VARIABLE && object VALUES
 
