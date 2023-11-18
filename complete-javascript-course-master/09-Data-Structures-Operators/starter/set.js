@@ -2,7 +2,7 @@
 
 console.log('--------------------SETS--------------------');
 
-const orderSet = new Set([
+const orderSets = new Set([
   'Pizza',
   'Pizza',
   'Paster',
@@ -11,30 +11,30 @@ const orderSet = new Set([
   'Pasta',
   'Chedar',
 ]);
-console.log(orderSet);
+console.log(orderSets);
 console.log(new Set('Rommer'));
 //Length of orderSet
-console.log(orderSet.size);
+console.log(orderSets.size);
 //Return true -> if present
-console.log(orderSet.has('Pizza'));
+console.log(orderSets.has('Pizza'));
 //Return false -> not present
-console.log(orderSet.has('Bread'));
+console.log(orderSets.has('Bread'));
 //Add to to OrderSet
-orderSet.add('Garlic Bread');
+orderSets.add('Garlic Bread');
 //Not counted for duplicate
-orderSet.add('Garlic Bread');
+orderSets.add('Garlic Bread');
 
-console.log(orderSet);
+console.log(orderSets);
 
 //Delete an item from orderSet
-orderSet.delete('Risotto');
+orderSets.delete('Risotto');
 
 //Clear set
 //orderSet.clear();
-console.log(orderSet);
+console.log(orderSets);
 
 //Looping
-for (const order of orderSet) console.log(order);
+for (const order of orderSets) console.log(order);
 
 //Example
 const staff = ['Waiter', 'Chef', 'Waiter', 'Botler', 'Manager', 'Waiter'];
