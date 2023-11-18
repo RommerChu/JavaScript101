@@ -28,6 +28,9 @@ console.log(undefined && 0 && '' && 'Hello' && 3); // undefine
 //IF and ELSE ternary operation
 if (restaurant.orderPizza) {
   restaurant.orderPizza('Mushrooms', 'spinach');
+  console.log('KKKKKKK');
+} else {
+  restaurant.orderPizza('Tomatoes', 'Mustard');
 }
 //Another way to state expression
 restaurant.orderPizza && restaurant.orderPizza('Mushrooms', 'Spinach');

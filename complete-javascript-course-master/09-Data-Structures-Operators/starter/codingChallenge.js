@@ -194,3 +194,5 @@ for (const sc1 of Object.entries(scorers.name)) {
 }
 
 console.log('---Other solutiuon---');
+
+console.log('Rommer xxxxxxxxxxx Chu');
