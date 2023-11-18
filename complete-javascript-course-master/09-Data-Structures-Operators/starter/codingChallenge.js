@@ -103,7 +103,7 @@ const arb = ['Davies', 'Muller', 'Lewandowski', 'Kimmich'];
 
 const printGoals = function (...players) {
   //console.log(players);
-  console.log(`${players.length} goals were scored`);
+  console.log(`${players.length} goals were scoreds`);
   for (let i = 0; i < players.length; i++) console.log(players[i]);
 };
 

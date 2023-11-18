@@ -26,7 +26,7 @@ const rest2 = {
 
 //Nullish operator will assign a value to a variable
 rest1.numberGuest ??= 51; // return 0
-rest2.numberGuest ??= 101; // return 101
+rest2.numberGuest ??= 110; // return 101
 
 // rest1.owner = rest1.owner && 'Ananymous'; // undefined - False + False = False
 // rest2.owner = rest2.owner && 'Ananymous'; // Ananymous - True + False = False
