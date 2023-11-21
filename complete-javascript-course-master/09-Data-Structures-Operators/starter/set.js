@@ -12,56 +12,48 @@ const orderSets = new Set([
   'Chedar',
 ]);
 console.log(orderSets);
-console.log(new Set('Rommer'));
+
+console.log(new Set('Peter'));
 //Length of orderSet
 console.log(orderSets.size);
+
 //Return true -> if present
 console.log(orderSets.has('Pizza'));
-//Return false -> not present
 console.log(orderSets.has('Bread'));
+
 //Add to to OrderSet
-orderSets.add('Garlic Bread');
+console.log(orderSets.has('Rommer'), 'xxxxx');
+
 //Not counted for duplicate
 orderSets.add('Garlic Bread');
-
+orderSets.add('Garlic Bread');
 console.log(orderSets);
 
 //Delete an item from orderSet
-orderSets.delete('Risotto');
-
-//Clear set
-//orderSet.clear();
+orderSets.delete('Garlic Bread');
 console.log(orderSets);
+console.log(orderSets[1]); //undefined - no index
 
 //Looping
-for (const order of orderSets) console.log(order);
+const orderType = 'Order Type: ';
+for (const order of orderSets) console.log(orderType, order);
 
 //Example
 const staff = ['Waiter', 'Chef', 'Waiter', 'Botler', 'Manager', 'Waiter'];
 console.log(staff);
 
 //Assigning and storing SET to a new Array
+console.log('----Passing staff to a new set----');
+
 const staffUnique = [...new Set(staff)];
 console.log(staffUnique);
-//To count length size of an array -> SIZE method
 console.log(
   new Set(['Waiter', 'Chef', 'Waiter', 'Botler', 'Manager', 'Waiter']).size
 );
 
-console.log(new Set(staffUnique).size);
+const staffUnique2 = new Set(staff);
+console.log(staffUnique2);
 
+//String is iterable
+console.log(new Set('RommerOrquizaChu'));
 console.log(new Set('RommerOrquizaChu').size);
-('use strict');
-
-console.log('-------------------Set-------------------');
-
-const orderSet = new Set([
-  'Pasta',
-  'Pizza',
-  'Pizza',
-  'Rissoto',
-  'Spaghetti',
-  'Spaghetti',
-]);
-
-console.log(orderSet);
