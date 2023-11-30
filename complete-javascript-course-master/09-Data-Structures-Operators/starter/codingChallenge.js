@@ -163,10 +163,10 @@ console.log('Average: ', avrg);
 // (except for "draw"). Hint: Note how the odds and the game objects have the
 // same property names 😉
 console.log('---My solution---');
-const { t1 = team1, t2 = x, t3 = team2 } = game;
-console.log(`Odd of victory ${game.team1}: ${t1}`);
-console.log(`Odd of draw ${game.x}: ${t2}`);
-console.log(`Odd of victory ${game.team2}: ${t3}`);
+// const { t1 = team1, t2 = x, t3 = team2 } = game;
+// console.log(`Odd of victory ${game.team1}: ${t1}`);
+// console.log(`Odd of draw ${game.x}: ${t2}`);
+// console.log(`Odd of victory ${game.team2}: ${t3}`);
 
 console.log('---Other solutiuon---');
 for (const [teams, odd] of Object.entries(game.odds)) {
@@ -240,4 +240,59 @@ console.log(
 for (const [min, event] of gameEvents) {
   const half = min <= 45 ? 'FIRST' : 'SECOND';
   console.log(`[${half} HALF] ${min}: ${event}`);
+}
+
+console.log('-------Coding Challenge #4--------');
+
+// const ud = function (
+//   underscore_case,
+//   firstName,
+//   someVariable,
+//   calculatedAge,
+//   delayedDeparture
+// ) {
+//   // console.log(`
+//   // ${underscore_case + '✅'}\n
+//   // ${firstName + '✅✅'}` );
+//   console.log(underscore_case + '✅\n', firstName + '✅✅\n');
+// };
+// ud('test', 'wheel');
+
+//create a textarea to DOM
+document.body.append(document.createElement('textarea'));
+//create a button in DOM
+document.body.append(document.createElement('button'));
+// to make button functionalble
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+  const rows = text.split('\n');
+
+  for (const [i, row] of rows.entries()) {
+    // const i = '✅';
+    const [first, second] = row.toLowerCase().trim().split('_');
+    //console.log(row, first, second);
+    const output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    console.log(`${output.padEnd(20)} ${'✅'.repeat(i + 1)}`);
+  }
+
+  console.log(rows);
+});
+
+//Exercise #2
+const getcode = str => str.slice(0, 3).toUpperCase();
+
+const flights =
+  '_Departure;tx1233;sfo23334;11:25+_Arrival;tx1233;sfo23334;11:25+_Departure;sx1200;txt12345;11:25';
+
+for (const flight of flights.split('+')) {
+  const [type, from, to, time] = flight.split(';');
+  const output = `${type.startsWith('_Departure') ? '🍎' : ''}${type.replaceAll(
+    '_',
+    ' '
+  )} ${getcode(from)} ${getcode(to)} (${time.replace(':', 'h')})`.padStart(37);
+  // console.log(flight.split(';'));
+  console.log(output);
 }
