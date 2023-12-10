@@ -53,8 +53,41 @@ console.log(rommer);
 console.log('--------------------');
 
 const newPassport = function (person) {
-  person.passportNum = Math.trunc(Math.random * 100000);
+  person.passportNum = Math.trunc(Math.random() * 100000);
   //console.log(person.passportNum);
 };
 newPassport(rommer);
-console.log(rommer);
+//console.log(rommer);
+checkIn(flight, rommer);
+
+console.log('---------Higher Order-----------');
+
+//FIRST FUNCTION
+const oneWord = function (str) {
+  return str.replace(/ /g, '').toLowerCase();
+};
+
+//SECOND FUNCTION
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(' ');
+  console.log(first);
+  return [first.toUpperCase(), ...others].join(' ');
+};
+
+//THIRD FUNCTION -- Higher Order Function
+const transformer = function (str, fn) {
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed String: ${fn(str)}`);
+
+  console.log(`Transformed by: ${fn.name}`);
+};
+transformer('Javascript is the best', upperFirstWord);
+transformer('Javascript is the best', oneWord);
+
+// JS uses callbacks all the time
+const high5 = function () {
+  console.log('🖐️');
+};
+
+document.body.addEventListener('click', high5);
+['Rommer', 'Cora', 'Peter'].forEach(high5);
