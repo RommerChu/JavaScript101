@@ -91,3 +91,67 @@ const high5 = function () {
 
 document.body.addEventListener('click', high5);
 ['Rommer', 'Cora', 'Peter'].forEach(high5);
+
+// Greeting function
+// Longer version of code
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+//----------Shorter version of code using arrow function
+const greetArr = greeting => name => console.log(`${greeting} ${name}`);
+
+//short code verision
+greet('Hello!')('Rommer');
+greet('Hello!')('Peter John');
+
+// long code version
+const greeterHey = greet('Hi');
+greeterHey('Rommer');
+greeterHey('Corazon');
+
+//The call and apply Methods
+const lufthansa = {
+  airline: 'Lufthansa',
+  iaCode: 'LH',
+  bookingsArr: [],
+  bookings(flightNum, name) {
+    console.log(
+      `${name} booked a set on ${this.airline}, flight ${this.iaCode}${flightNum}`
+    );
+    this.bookingsArr.push({ flight: `${this.iaCode}${flightNum}`.name });
+  },
+};
+console.log('-----------------------');
+console.log(lufthansa);
+
+lufthansa.bookings(239, 'Rommer Chu');
+lufthansa.bookings(240, 'Corazon Chu');
+lufthansa.bookings(260, 'Peter Chu');
+
+//CALL method
+const eurowings = {
+  airline: 'Eurowings',
+  iaCode: 'EW',
+  bookingsArr: [],
+};
+
+const book = lufthansa.bookings;
+
+//This will not work because of "this" is only pointing to Lufthanza
+//book( 23, 'Peter John' );
+
+//Solution? use 'CALL' method
+book.call(eurowings, 23, 'Peter John');
+console.log(eurowings);
+
+const philsky = {
+  airline: 'Philsky',
+  iaCode: 'PR',
+  bookingsArr: [],
+};
+const book1 = lufthansa.bookings;
+book1.call(philsky, 55, 'Rommer and Peter');
+console.log(philsky);
