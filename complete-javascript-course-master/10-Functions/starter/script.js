@@ -112,6 +112,7 @@ const greeterHey = greet('Hi');
 greeterHey('Rommer');
 greeterHey('Corazon');
 
+// Airline booking sample
 //The call and apply Methods
 const lufthansa = {
   airline: 'Lufthansa',
@@ -144,14 +145,44 @@ const book = lufthansa.bookings;
 //book( 23, 'Peter John' );
 
 //Solution? use 'CALL' method
-book.call(eurowings, 23, 'Peter John');
-console.log(eurowings);
 
 const philsky = {
   airline: 'Philsky',
   iaCode: 'PR',
   bookingsArr: [],
 };
-const book1 = lufthansa.bookings;
-book1.call(philsky, 55, 'Rommer and Peter');
+
+const arabsky = {
+  airline: 'ArabSky',
+  iaCode: 'AS',
+  bookingsArr: [],
+};
+
+const cathay = {
+  airline: 'Cathay Pacific',
+  iaCode: 'CA',
+  bookingsArr: [],
+};
+
+book.call(eurowings, 23, 'Peter John');
+console.log(eurowings);
+
+//const book1 = lufthansa.bookings;
+book.call(philsky, 55, 'Rommer and Peter');
+console.log(philsky);
+
+//const book2 = lufthansa.bookings;
+book.call(arabsky, 75, 'Jose Santos');
+console.log(arabsky);
+
+//const book3 = lufthansa.bookings;
+book.call(cathay, 707, 'Peter John Chu');
+console.log(cathay);
+
+book.call(arabsky, ...flight);
+book.call(philsky, ...flight);
+
+//old method style
+//book.apply(philsky, flightNum);
+
 console.log(philsky);
