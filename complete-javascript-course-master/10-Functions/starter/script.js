@@ -20,11 +20,13 @@ const createBooking = function (
   };
   console.log(booking);
   bookingsData.push(booking);
+  console.log('xxxxxxxxxxxxxxxxxxxxxxx');
 };
 
 createBooking('LM123');
 createBooking('PS009', 5);
 createBooking('PS009', undefined, 15);
+createBooking('PS5987', 85, 2);
 console.log(bookingsData);
 
 console.log('--------------------');
@@ -104,7 +106,7 @@ const greet = function (greeting) {
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
 
 //short code verision
-greet('Hello!')('Rommer');
+greet('Hello!')('John');
 greet('Hello!')('Peter John');
 
 // long code version
@@ -164,7 +166,7 @@ const cathay = {
   bookingsArr: [],
 };
 
-book.call(eurowings, 23, 'Peter John');
+book.call(eurowings, 23, 'John');
 console.log(eurowings);
 
 //const book1 = lufthansa.bookings;
@@ -181,8 +183,9 @@ console.log(cathay);
 
 book.call(arabsky, ...flight);
 book.call(philsky, ...flight);
+book.call(eurowings, ...flight);
 
 //old method style
 //book.apply(philsky, flightNum);
 
-console.log(philsky);
+//console.log(philsky);
