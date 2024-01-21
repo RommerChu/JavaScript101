@@ -1,5 +1,14 @@
 'use strict';
 
+const family = [];
+
+const familyAdd = function (person, gender, age) {
+  const happyFamily = { person, gender, age };
+  console.log(happyFamily);
+  family.push(happyFamily);
+  console.log(family);
+};
+
 const bookingsData = [];
 
 const createBooking = function (
@@ -8,16 +17,12 @@ const createBooking = function (
   price = 199 * numPassengers
 ) {
   //Placing default values if unavailable
-
   //ES5
   //   numPassengers = numPassengers || 1;
   //   price = price || 199;
 
-  const booking = {
-    flightNum,
-    numPassengers,
-    price,
-  };
+  const booking = { flightNum, numPassengers, price };
+
   console.log(booking);
   bookingsData.push(booking);
   console.log('xxxxxxxxxxxxxxxxxxxxxxx');
@@ -130,7 +135,7 @@ const lufthansa = {
 console.log('-----------------------');
 console.log(lufthansa);
 
-lufthansa.bookings(239, 'Rommer Chu');
+lufthansa.bookings(239, 'Rommer Orquiza Chu');
 lufthansa.bookings(240, 'Corazon Chu');
 lufthansa.bookings(260, 'Peter Chu');
 
@@ -166,6 +171,7 @@ const cathay = {
   bookingsArr: [],
 };
 
+//----------------CALL method
 book.call(eurowings, 23, 'John');
 console.log(eurowings);
 
