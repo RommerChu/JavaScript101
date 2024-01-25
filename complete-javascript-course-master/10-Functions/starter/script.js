@@ -171,6 +171,10 @@ const cathay = {
   bookingsArr: [],
 };
 
+/**
+ * Demonstrates using the call() method to invoke the bookings()
+ * method on different objects while setting the this context.
+ */
 //----------------CALL method
 book.call(eurowings, 23, 'John');
 console.log(eurowings);
